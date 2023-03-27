@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "725833058373",
+    "firebase_url": "https://dynamic-links-1e95c-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "dynamic-links-1e95c",
+    "storage_bucket": "dynamic-links-1e95c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725833058373:android:d0d8ae264933fd31e9bb2c",
+        "android_client_info": {
+          "package_name": "com.example.todolist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725833058373-fp15dcdnsg7mk18hifnc9fcdpmhfjq14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5D-pn6H2DdUQ6AMIMK96cuHH34XO_BEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725833058373-fp15dcdnsg7mk18hifnc9fcdpmhfjq14.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725833058373:android:4e38f34052fbf301e9bb2c",
+        "android_client_info": {
+          "package_name": "com.spaceo.dynamiclink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725833058373-fp15dcdnsg7mk18hifnc9fcdpmhfjq14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5D-pn6H2DdUQ6AMIMK96cuHH34XO_BEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725833058373-fp15dcdnsg7mk18hifnc9fcdpmhfjq14.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
