@@ -21,18 +21,30 @@
         <TextView
             android:id="@+id/taskTitle"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             android:text="Title"
             android:textAppearance="?attr/textAppearanceListItem"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/taskCheckBox"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/editButton"
             app:layout_constraintStart_toEndOf="@id/taskCheckBox"
             app:layout_constraintTop_toTopOf="@+id/taskCheckBox" />
 
+        <ImageButton
+            android:id="@+id/editButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:elevation="2dp"
+            android:focusable="true"
+            android:src="@android:drawable/ic_menu_edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/taskTitle"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

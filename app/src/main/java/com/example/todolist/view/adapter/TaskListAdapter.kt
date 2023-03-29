@@ -12,20 +12,24 @@ import com.firebase.ui.database.FirebaseRecyclerOptions
 
 class TaskListAdapter(
     options: FirebaseRecyclerOptions<Task>,
-) :
-    FirebaseRecyclerAdapter<Task, TaskListAdapter.TaskViewHolder>(options) {
+) : FirebaseRecyclerAdapter<Task, TaskListAdapter.TaskViewHolder>(options) {
 
     var onTaskCheckedListener: OnTaskCheckedListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.list_item_task, parent, false)
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.list_item_task, parent, false)
         return TaskViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int, task: Task) {
         holder.bind(task)
     }
+
+    fun onSwipe(item: Task) {
+        onTaskCheckedListener?.onTaskSwiped(item.id!!)
+    }
+
 
     inner class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding = ListItemTaskBinding.bind(itemView)
@@ -36,10 +40,24 @@ class TaskListAdapter(
             binding.taskCheckBox.setOnCheckedChangeListener { _, isChecked ->
                 onTaskCheckedListener?.onTaskChecked(task.id!!, isChecked)
             }
+            binding.root.setOnClickListener {
+                onTaskCheckedListener?.onTaskClicked(task.id!!)
+
+            }
+            binding.editButton.setOnClickListener {
+                onTaskCheckedListener?.onTaskEdited(task)
+            }
+
         }
+
     }
 
     interface OnTaskCheckedListener {
         fun onTaskChecked(taskId: String, isCompleted: Boolean)
+        fun onTaskClicked(taskId: String)
+        fun onTaskSwiped(taskId: String)
+
+        fun onTaskEdited(task: Task)
     }
+
 }
